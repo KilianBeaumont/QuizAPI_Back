@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class Theme {
+- theme : string
+}
+
+class Reponse {
+- reponse : string
+- estCorrecte : bool
+}
+
+class Question {
+- question : string
+}
+
+Theme "1..1 " --- "1..* " Question
+Reponse "1..1 " --- "1..* " Question
+
+@enduml
